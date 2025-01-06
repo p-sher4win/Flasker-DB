@@ -62,6 +62,7 @@ def page_not_found(e):
 def page_not_found(e):
     return render_template('500.html'), 500
 
+# Greet User
 @app.route('/name', methods=['GET', 'POST'])
 def name():
     name = None
@@ -125,8 +126,36 @@ def update(id):
     else:
         return render_template("update.html",
                                    form=form,
-                                   name_to_update=name_to_update)
+                                   name_to_update=name_to_update,
+                                   id=id)
         
+
+# Delete MYSQL Database Record
+@app.route('/delete/<int:id>')
+def delete(id):
+    name = None
+    form = UserForm()
+    user_to_delete = Users.query.get_or_404(id)
+
+    try:
+        db.session.delete(user_to_delete)
+        db.session.commit()
+        flash("User Deleted Successfully!!")
+
+        our_users = Users.query.order_by(Users.date_added)
+
+        return render_template('add_user.html',
+                           name=name,
+                           form=form,
+                           our_users=our_users)
+
+    except:
+        flash("There was a problem deleting User... Try again!!")
+        return render_template('add_user.html',
+                           name=name,
+                           form=form,
+                           our_users=our_users)
+
 
 
 if __name__ == "__main__":
