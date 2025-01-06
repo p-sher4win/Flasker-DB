@@ -9,8 +9,14 @@ app = Flask(__name__)
 
 # Secret Key
 app.config['SECRET_KEY'] = "my super secret key that no one suppose to know"
+
+# Old SQLite DB
 # Add Database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+
+# New MYSQL DB
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:2002@localhost/our_users'
+
 
 # Initialize DB
 db = SQLAlchemy(app)
