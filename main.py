@@ -122,12 +122,14 @@ def update(id):
             flash("User Updated Successful")
             return render_template("update.html",
                                    form=form,
-                                   name_to_update=name_to_update)
+                                   name_to_update=name_to_update,
+                                   id=id)
         except:
             flash("Error! Looks like there was a problem... try again!!!")
             return render_template("update.html",
                                    form=form,
-                                   name_to_update=name_to_update)
+                                   name_to_update=name_to_update,
+                                   id=id)
     else:
         return render_template("update.html",
                                    form=form,
