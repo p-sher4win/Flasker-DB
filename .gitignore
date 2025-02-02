@@ -1,0 +1,4 @@
+virt/
+instance/
+migrations/
+__pycache__/

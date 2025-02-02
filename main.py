@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, flash, request
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
@@ -16,7 +17,11 @@ app.config['SECRET_KEY'] = "my super secret key that no one suppose to know"
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 
 # New MYSQL DB
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:2002@localhost/our_users'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:2002@localhost/our_users'
+
+# Server PostgreSQL DB
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI')
+# postgresql://flasker_usersdata_user:jrSBrwb1inl7wmyWtO0fSZ2LO57p5jyu@dpg-cufgnl0gph6c7383spsg-a.singapore-postgres.render.com/flasker_usersdata
 
 
 # Initialize DB
