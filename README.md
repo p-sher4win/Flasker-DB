@@ -7,7 +7,7 @@ Web service using python and flask for handling crud operations.
 [Website Link](https://flask-crud-proj.onrender.com)
 
 About This Project:
-- Tech Stack: Python, Flask, MySQL, BootStrap
+- Tech Stack: Python, Flask, MySQL, PostgreSQL, BootStrap
 - Build an API
 - Responsive UI With BootStrap
 - Error Handling
