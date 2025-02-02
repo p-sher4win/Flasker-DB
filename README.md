@@ -1,4 +1,4 @@
-# PYTHON FLASK PROJECT (USER CURD)
+# PYTHON FLASK PROJECT (User CURD)
 
 Web service using python and flask for handling crud operations.
 
