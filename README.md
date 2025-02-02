@@ -2,7 +2,7 @@
 
 Web service using python and flask for handling crud operations.
 
-![image_alt](https://github.com/p-sher4win/mern-stack-proj/blob/832e491c5b0d2685669492480bbff5b204006a6d/static/images/flasker-proj.png)
+![image_alt](https://github.com/p-sher4win/Flasker-DB-CURD/blob/d4de052a85e5246cf24a2e6c2cd290c36db90a4f/static/images/flasker-proj.png)
 
 About This Project:
 - Tech Stack: Python, Flask, MySQL, BootStrap
